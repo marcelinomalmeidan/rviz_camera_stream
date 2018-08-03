@@ -141,9 +141,9 @@ public:
     image.width = width;
     image.step = pixelsize * width;
     if (pixelsize == 3)
-      image.encoding = sensor_msgs::image_encodings::RGB8;  // would break if pf changes
+      image.encoding = sensor_msgs::image_encodings::BGR8;  // would break if pf changes
     else if (pixelsize == 4)
-      image.encoding = sensor_msgs::image_encodings::RGBA8;  // would break if pf changes
+      image.encoding = sensor_msgs::image_encodings::BGRA8;  // would break if pf changes
     else
     {
       ROS_ERROR_STREAM("unknown pixe format " << pixelsize << " " << pf);
